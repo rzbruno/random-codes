@@ -16,6 +16,6 @@ def static():
 
 @route('/static/<filename>')
 def server_static(filename):
-    return static_file(filename, root=path)
+    return static_file(filename, root=path, download=filename)
 
 run(host='0.0.0.0', port=8080)
